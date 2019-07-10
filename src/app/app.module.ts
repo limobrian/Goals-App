@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http'
 // ******IMPORTING MODULES, DIRECTIVES & COMPONENTS****
 import { AppComponent } from './app.component';
 import { GoalComponent } from './goal/goal.component';
@@ -8,6 +9,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import {FormsModule} from '@angular/forms';
+import {AlertsService} from './alert-service/alerts.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,8 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
